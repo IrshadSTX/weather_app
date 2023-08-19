@@ -27,15 +27,15 @@ class ContainerWidget extends StatelessWidget {
           margin: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
           width: 70,
           decoration: BoxDecoration(
-              color: Colors.amber.shade200,
+              color: Colors.blue.shade200,
               borderRadius: const BorderRadius.all(
                 Radius.circular(10),
               ),
               boxShadow: const [
                 BoxShadow(
-                  offset: Offset(0, 1),
-                  blurRadius: 5,
-                  color: Colors.grey,
+                  offset: Offset(0, 3),
+                  blurRadius: 3,
+                  color: Colors.white54,
                 ),
               ]),
           child: Image.asset(

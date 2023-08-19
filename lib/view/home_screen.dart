@@ -94,13 +94,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Text(
                                           '${result.name}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 30,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        Text('$formattedTime',
-                                            style: TextStyle(
-                                                fontSize: 18,
+                                        Text(formattedTime,
+                                            style: const TextStyle(
+                                                fontSize: 16,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.grey)),
                                       ],
@@ -146,20 +146,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                         left: 30,
                                         child: Text(
                                           result.condition!,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white54,
                                               fontSize: 26),
                                         )),
                                     Positioned(
                                         right: 30,
-                                        bottom: 50,
+                                        bottom: 40,
                                         child: Text(
                                           '${result.tempC!.split('.')[0]}°',
-                                          style: TextStyle(
-                                              color: Colors.white,
+                                          style: const TextStyle(
+                                              color: Colors.white70,
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 60),
+                                              fontSize: 80),
                                         ))
                                   ],
                                 ),
@@ -191,54 +191,54 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 height: size.height * 0.02,
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Text(
-                                    'Today',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ),
-                                  Text(
-                                    'Next 7 Days',
-                                    style: TextStyle(
-                                        color: Colors.blueGrey,
-                                        fontWeight: FontWeight.w600),
-                                  )
-                                ],
-                              ),
-                              kHeight,
-                              SizedBox(
-                                height: size.height * .2,
-                                child: ListView.separated(
-                                  scrollDirection: Axis.horizontal,
-                                  separatorBuilder: (context, index) => kWidth,
-                                  itemBuilder: (context, index) {
-                                    return Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 20),
-                                      margin: const EdgeInsets.only(
-                                          right: 20, top: 10, bottom: 10),
-                                      width: 80,
-                                      decoration: const BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(10),
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              offset: Offset(0, 1),
-                                              blurRadius: 5,
-                                              color: Colors.grey,
-                                            ),
-                                          ]),
-                                    );
-                                  },
-                                  itemCount: 7,
-                                ),
-                              ),
+                              // Row(
+                              //   mainAxisAlignment:
+                              //       MainAxisAlignment.spaceBetween,
+                              //   children: const [
+                              //     Text(
+                              //       'Today',
+                              //       style: TextStyle(
+                              //           fontWeight: FontWeight.bold,
+                              //           fontSize: 20),
+                              //     ),
+                              //     Text(
+                              //       'Next 7 Days',
+                              //       style: TextStyle(
+                              //           color: Colors.blueGrey,
+                              //           fontWeight: FontWeight.w600),
+                              //     )
+                              //   ],
+                              // ),
+                              // kHeight,
+                              // SizedBox(
+                              //   height: size.height * .2,
+                              //   child: ListView.separated(
+                              //     scrollDirection: Axis.horizontal,
+                              //     separatorBuilder: (context, index) => kWidth,
+                              //     itemBuilder: (context, index) {
+                              //       return Container(
+                              //         padding: const EdgeInsets.symmetric(
+                              //             vertical: 20),
+                              //         margin: const EdgeInsets.only(
+                              //             right: 20, top: 10, bottom: 10),
+                              //         width: 80,
+                              //         decoration: const BoxDecoration(
+                              //             color: Colors.white,
+                              //             borderRadius: BorderRadius.all(
+                              //               Radius.circular(10),
+                              //             ),
+                              //             boxShadow: [
+                              //               BoxShadow(
+                              //                 offset: Offset(0, 1),
+                              //                 blurRadius: 5,
+                              //                 color: Colors.grey,
+                              //               ),
+                              //             ]),
+                              //       );
+                              //     },
+                              //     itemCount: 7,
+                              //   ),
+                              // ),
                             ],
                           );
                         } else if (snapShot.connectionState ==
